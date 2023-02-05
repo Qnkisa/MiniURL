@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --ff-headings:'Prata', serif;
+    --ff-text:'Work Sans', sans-serif;
+    --blue:#0047AB;
+}
+
+body{
+    background-color: var(--blue);
+    color: white;
+}
+
+header{
+    padding: 1rem 5rem;
+}
+
+.nav-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.nav-logo p{
+    font-family: var(--ff-headings);
+    font-size: 2.5rem;
+}
+
+.nav-logo img{
+    width: 100px;
+}
+
+.main-div{
+    margin: 100px auto;
+    text-align: center;
+    border: 5px solid white;
+    padding: 2rem;
+    max-width: 800px;
+    border-radius: 20px;
+}
+
+h1{
+    font-size: 3rem;
+    font-family: var(--ff-headings);
+    line-height: 50px;
+    margin-bottom: 35px;
+}
+
+.main-div form{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.main-div form input{
+    width: 320px;
+    height: 50px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    font-size: 1.15rem;
+    font-family: var(--ff-text);
+    outline: none;
+    padding-left: 15px;
+    border: 1px solid white;
+    transition: all .3s;
+}
+
+.main-div form input:focus{
+    font-size: 1.3rem;
+}
+
+
+
+.main-div > form button{
+    width: 80px;
+    height: 50px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border:1px solid white;
+    background-color: var(--blue);
+    color: white;
+    font-family: var(--ff-text);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.main-div > form button:hover{
+    background-color: white;
+    color: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+.main-div-results{
+    margin: 50px auto;
+    max-width: 500px;
+}
+
+.result{ 
+    border-bottom: 1px solid white;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.main-div-result{
+    display: block;
+    width: 100%;
+}
+
+.main-div-result > p{
+    margin-bottom: 20px;
+}
+
+.main-div-result a{
+    display: inline-block;
+}
+
+.short-link-button{
+    background-color: var(--blue);
+    color: white;
+    font-family: var(--ff-text);
+    opacity: 0.7;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.short-link-button:hover{
+    text-decoration: underline;
+}
+
+.main-div-result p{
+    font-family: var(--ff-headings);
+    font-size: 1.5rem;
+}
+
+.main-div-result a{
+    font-size: 1rem;
+    opacity: 0.7;
+    display: block;
+    margin-top: 10px;
+    font-family: var(--ff-text);
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.main-div-result a:hover{
+    text-decoration: underline;
+}
+
+.result-remove form button{
+    color: var(--blue);
+    background-color: white;
+    border-radius: 20px;
+    width: 200px;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.result-remove form button:hover{
+    border: 1px solid white;
+    color: white;
+    background-color: var(--blue);
+}
+
+.errors p{
+    margin-top:15px; 
+    font-family: var(--ff-text); 
+    text-transform:uppercase; 
+    color:red;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#green-url{
+    color: green;
+}
+
+.desc-div{
+    max-width: 800px;
+    margin: 0 auto 100px;
+    text-align: center;
+}
+
+h2{
+    font-size: 2rem;
+    font-family: var(--ff-headings);
+    margin-bottom: 15px;
+}
+
+.desc-div p{
+    font-size: 1.25rem;
+    font-family: var(--ff-text);
+    opacity: 0.7;
+}
+
+.brag-div{
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    text-align: center;
+    margin: 0 auto 80px;
+}
+
+.brag-icon{
+    font-size: 5rem;
+    margin-bottom: 10px;
+}
+
+.brag p{
+    font-size: 1.75rem;
+    font-family: var(--ff-headings);
+    margin-bottom: 25px;
+}
+
+.brag span{
+    font-size: 1.1rem;
+    opacity: 0.7;
+    font-family: var(--ff-text);
+    line-height: 30px;
+}
+
+footer{
+    width: 100%;
+    border-top: 5px solid white;
+    padding: 3rem 5rem;
+}
+
+footer ul{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: auto;
+}
+
+footer ul li a{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: var(--ff-text);
+    text-decoration: none;
+    color: white;
+}
+
+footer ul li a::after{
+    display: block;
+    width: 0;
+    height: 1px;
+    content: "";
+    background-color: white;
+    transition: all .3s;
+}
+
+footer ul li a:hover::after{
+    width: 100%;
+}
+
+.main-div-result form{
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.main-div-result form button{
+    border: none;
+    display: block;
+    margin: auto;
+}
+
+.main-div-result form button:hover{
+    background-color: var(--blue);
+    color: white;
+    border: 1px solid var(--blue);
+}
+
+
+
+
+/*about container start*/
+
+.about-container{
+    max-width: 800px;
+    margin: 50px auto 200px;
+    text-align: center;
+}
+
+.about-container p{
+    font-size: 1.75rem;
+    opacity: 0.7;
+    font-family: var(--ff-text);
+    margin-bottom: 50px;
+}
+
+.about-container p a{
+    font-size: 2.25rem;
+    font-style: italic;
+    color: white;
+    font-family: var(--ff-headings);
+    margin: 0 10px;
+}
+
+
+
+/*media queries start*/
+
+@media (max-width:900px) {
+    .main-div{
+        margin: 40px auto;
+        padding: 1rem;
+        max-width: 450px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .main-div-result{
+        display: block;
+    }
+
+    .main-div-result p{
+        font-size: 1.25rem;
+    }
+
+    .main-div-result p:first-child{
+        margin-bottom: 20px;
+    }
+
+    .main-div-result a{
+        font-size: 0.75rem;
+    }
+
+    .desc-div{
+        max-width: 450px;
+        margin-bottom: 60px;
+    }
+
+    h2{
+        font-size: 1.8rem;
+    }
+
+    .desc-div p{
+        font-size: 1rem;
+    }
+
+    .brag-div{
+        max-width: 450px;
+        display: block;
+    }
+
+    .brag{
+        margin-bottom: 25px;
+    }
+
+    .brag p{
+        margin-bottom: 10px;
+        font-size: 1.25rem;
+    }
+
+    .brag span{
+        font-size: 0.85rem;
+        line-height: 25px;
+    }
+
+    .brag-icon{
+        font-size: 3.5rem;
+    }
+
+    footer{
+        padding: 1.5rem 3rem;
+    }
+    
+    footer ul{
+        width: 80%;
+    }
+
+    .about-container{
+        padding: 0 3rem;
+        margin: 35px auto 125px;
+    }
+
+    .about-container p{
+        font-size: 1.25rem;
+        margin-bottom: 25px;
+    }
+
+    .about-container p a{
+        font-size: 1.4rem;
+        margin: 0 2.5px;
+    }
+
+    .main-div-result form > p{
+        margin-bottom: 10px;
+    }
+
+    .short-link-button{
+        font-size: 0.75rem;
+    }
+
+    .short-link-p{
+        position: relative;
+        top: 10px;
+    }
+}
+
+@media (max-width:500px) {
+    header{
+        padding: 0.5rem;
+    }
+
+    .nav-logo p{
+        font-size: 1.5rem;
+    }
+
+    .nav-logo img{
+        width: 75px;
+    }
+
+    .main-div{
+        max-width: 280px;
+    }
+    
+    h1{
+        font-size: 1.5rem;
+        line-height: 35px;
+    }
+
+    .main-div form{
+        width: 230px;
+    }
+
+    .main-div form input{
+        width: 160px;
+        height: 35px;
+        font-size: 0.7rem;
+    }
+
+    .main-div form input:focus{
+        font-size: 0.9rem;
+    }
+
+    .main-div > form button{
+        width: 70px;
+        height: 35px;
+        font-size: 0.7rem;
+    }
+
+    .result-remove form button{
+        color: var(--blue);
+        background-color: white;
+        border-radius: 20px;
+        font-size: 1rem;
+        width: 120px;
+    }
+
+    .main-div-results{
+        margin: 20px auto;
+    }
+
+    .main-div-result p{
+        font-size: 1rem;
+    }
+
+    .main-div-result p:first-child{
+        margin-bottom: 10px;
+    }
+
+    .main-div-result p span{
+        font-size: 0.6rem;
+    }
+
+    .desc-div{
+        max-width: 280px;
+        margin-bottom: 30px;
+    }
+
+    h2{
+        font-size: 1.3rem;
+    }
+
+    .desc-div p{
+        font-size: 0.8rem;
+    }
+
+    .brag-div{
+        margin-bottom: 40px;
+        max-width: 280px;
+    }
+
+    .brag-icon{
+        font-size: 2.5rem;
+    }
+
+    .brag p{
+        font-size: 1rem;
+    }
+
+    .brag span{
+        font-size: 0.8rem;
+    }
+
+    footer ul li a{
+        font-size: 1.25rem;
+    }
+
+    .about-container{
+        padding: 0 1rem;
+    }
+
+    .about-container p{
+        font-size: 1rem;
+    }
+
+    .about-container p a{
+        font-size: 1.1rem;
+        margin: 0 2px;
+    }
+
+    .short-link-button{
+        font-size: 0.6rem;
+    }
+
+    .main-div-result > p a{
+        font-size: 0.6rem;
+        position: relative;
+        bottom: 7px;
+    }
+
+    .result-remove form button{
+        padding: 5px 10px;
+    }
+}
